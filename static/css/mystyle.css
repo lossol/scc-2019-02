@@ -1,0 +1,46 @@
+		body {
+	background-color: #fff
+	/*font-family: '나눔고딕';*/
+
+}
+
+#poster {
+	overflow: hidden;
+	width: 200px;
+	height: 300px;
+	margin: 0px 5px 0px 20px;
+	padding: auto;
+	float: left;
+}
+
+
+#content {
+	width: 200px;
+	height: 250px;
+	margin: 20px 5px 0px 20px;
+	padding: auto;
+	float: left;
+
+}
+#story {
+	overflow: auto;
+	background-color: #abc;
+	width: 450px;
+	height: 200px;
+	font-size: 2rem;
+	margin: 20px;
+	padding: auto;
+	/*float: left;*/
+	clear: left;
+}
+.story-one {font-size: medium;}
+.story-two {font-size: large;}
+#exit {
+	float:left;
+	width: 70px;
+	height: 10px;
+	font-size: 1rem;
+	margin: 2px 0px 0px 50px;
+	padding: auto;
+
+}
