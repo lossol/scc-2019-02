@@ -5,29 +5,31 @@
     <title>팝업으로 줄거리 띄우기</title>
     <!--    index.html에서 차례대로 나가기-->
     <link rel = "stylesheet" type="text/css" href = "../static/css/mystyle.css">
+    <link href="https://fonts.googleapis.com/css?family=Cute+Font|Gamja+Flower|Sunflower:300|Nanum+Pen+Script&display=swap&subset=korean" rel="stylesheet">
     <script src="https://movie.naver.com/movie/bi/mi/basic.nhn?code=174903#"></script>
 </head>
 <body>
     <div class="img" id="poster">
 <!--        자바스크립트에서 스크립트 받을려고 script 를 썻엇나보다-->
-        <img src="https://movie-phinf.pstatic.net/20190724_161/1563931152464tk11A_JPEG/movie_image.jpg?type=m203_290_2"/>
+        <img src="https://movie-phinf.pstatic.net/20190724_161/1563931152464tk11A_JPEG/movie_image.jpg?type=m203_290_2"alt=" "/>
 
     </div>
+
     <div class="pop" id="content">
-        <p class="title">제목 : <a href="div.mv_info_area>div.mv_info>h3>a"></a></p>
-        <p class="directors">감독 : <a href="div.mv_info_area > div.mv_info > dl > dd:nth-child(4) > p > a"></a></p>
-        <p class="actors">주연 : <a href="div.mv_info_area > div.mv_info > dl > dd:nth-child(6) > p > a"></a></p>
-        <p class="dates">개봉일 : <a href="div.mv_info_area > div.mv_info > dl > dd:nth-child(2) > p > span:nth-child(4)"></a></p>
+        <p class="title">제목 : {{title}}</p>
+        <p class="directors">감독 : {{director}}</p>
+        <p class="actors">주연 : {{actor}}</p>
+        <p class="dates">개봉일 :{{date}}</p>
     </div>
 
     <div class="pop2" id="story" >
-        <p class =subtitle>소제목<a href="div.article > div.section_group.section_group_frst > div:nth-child(1) > div > div.story_area > h5"></a></p>
-        <p class =story>대학교 산악 동아리 에이스 출신이지만<a href="div.article > div.section_group.section_group_frst > div:nth-child(1) > div > div.story_area > p"></a></p>
+        <p class =subtitle>{{subtitle}}</p>
+        <p class =story>{{story}}</p>
 <!--        subtitle = soup.select_one('div.article > div.section_group.section_group_frst > div:nth-child(1) > div > div.story_area > h5').text
 story = soup.select_one('div.article > div.section_group.section_group_frst > div:nth-child(1) > div > div.story_area > p').text-->
     </div>
     <div class="pop3" id="exit">
-        <button>나가기</button>
+        <input type="button" onclick="self.close()" value="창닫기!" />
     </div>
 </body>
 </html>

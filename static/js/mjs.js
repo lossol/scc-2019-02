@@ -6,23 +6,23 @@ window.onload=function(){
 //window.open('index.html','width=2000px,height=1500')팝업창 크기조절은 윤지씨
 
     function get_moive(){
-     $.ajax({
-        type: "GET",
-        url: "/post",
-        data: {},
-        success: function(result){
-            console.log(result);
-            if(result["result"] == 'success'){
-                alert("성공!")
-                window.location.reload(true);
-            }else{
-                alert("실패 하였습니다.")
+        $.ajax({
+            type: "GET",
+            url: "/post",
+            data: {},
+            success: function(result){
+                console.log(result);
+                if(result["result"] == 'success'){
+                    alert("성공!")
+                    window.location.reload(true);
+                }else{
+                    alert("실패 하였습니다.")
+                }
             }
-          }
         })
     }
 
-     function get_posting() {
+    function get_posting() {
        $.ajax({
           type: "GET",
           url: "/post",
@@ -42,22 +42,27 @@ window.onload=function(){
               make_card(title,directors,actors,dates,subtitle,story);
             }
           }
-        })
-     }
-      function make_card(url,comment,title,image,description) {
+       })
+    }
+    function make_card(url,comment,title,image,description) {
         $('#post-cards').append('<div class="pop">\
             <div class="pop">\
-              <p class="title">'+description+'</p>\
-              <p class="directors">'+description+'</p>\
-              <p class="actors">'+description+'</p>\
-              <p class="dates">'+comment+'</p>\
-              <p class="subtitle">'+comment+'</p>\
-              <p class="story">'+comment+'</p>\
-            </div>\
-          </div>');
-      }
+                <p class="title">'+description+'</p>\
+                <p class="directors">'+description+'</p>\
+                <p class="actors">'+description+'</p>\
+                <p class="dates">'+comment+'</p>\
+                <p class="subtitle">'+comment+'</p>\
+                <p class="story">'+comment+'</p>\
+                </div>\
+            </div>');
+    }
 //    창닫기
-    function MovePage() {
-        window.opener.top.location.href="연결할파일"
-        window.close()
+//    function frameclose() {
+//        window.opener.top.location.href="https:movie.naver.com/movie/bi/mi/basic.nhn?code=174903#"
+//        window.close()
+//    }
+    function CloseWindow() {
+        window.close();
+        self.close();
+        window.open('','_self').close();
     }

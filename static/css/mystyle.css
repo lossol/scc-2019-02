@@ -1,40 +1,71 @@
 		body {
-	background-color: #fff
+	/*background-color: #F6F6F6 ; */
+
 	/*font-family: '나눔고딕';*/
 
 }
 
+
 #poster {
 	overflow: hidden;
 	width: 200px;
-	height: 300px;
-	margin: 0px 5px 0px 20px;
-	padding: auto;
+	height: 288px;
+	margin: 0px 5px 5px 20px;
+	border: 3px solid #333333;
+	border-radius: 0.3rem;
 	float: left;
 }
 
 
 #content {
-	width: 200px;
+	width: 300px;
 	height: 250px;
 	margin: 20px 5px 0px 20px;
 	padding: auto;
+	font-family: 'Gamja Flower', cursive;
+	font-size: 30px;
+	color: #2ac1bc;
 	float: left;
 
 }
+.title {
+    margin: 15px 20px 15px 10px;
+}
+.directors {
+    margin: 15px 20px 15px 10px;
+}
+.actors {
+    margin: 15px 20px 15px 10px;
+}
+.dates {
+    margin: 15px 20px 15px 10px;
+}
 #story {
 	overflow: auto;
-	background-color: #abc;
+	background-color: #2ac1bc;
 	width: 450px;
 	height: 200px;
 	font-size: 2rem;
 	margin: 20px;
 	padding: auto;
+	border-radius: 0.3rem;
+	border: solid;
+	border-color: #2ac1bc;
 	/*float: left;*/
 	clear: left;
 }
-.story-one {font-size: medium;}
-.story-two {font-size: large;}
+.subtitle {
+    font-size: 25px;
+    color: #ffffff;
+    font-family: 'Gamja Flower', cursive;
+}
+.story {
+    font-size: 20px;
+    color: #ffffff;
+    font-family: 'Sunflower', sans-serif;
+}
+
+
 #exit {
 	float:left;
 	width: 70px;
